@@ -188,6 +188,12 @@ st.dataframe(preview_df, use_container_width=True)
 
 st.write("")
 st.write("")
+st.write("")
+st.write("")
+st.write("")
+
+
+
 
 if st.button(" PREDICT MOBILE PRICE"):
     
