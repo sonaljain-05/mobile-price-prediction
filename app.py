@@ -32,7 +32,7 @@ st.title("MOBILE PRICE PREDICTION APP")
 
 
 st.write("This app predicts mobile price based on specifications.")
-st.subheader("Please enter the phone specifications below")
+
 
 img = Image.open("mobile.png")
 img=img.resize((2000, 1000))
@@ -43,6 +43,7 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown("<br><br>", unsafe_allow_html=True)
 
 st.header("Enter Smartphone Features")
+st.write("Please enter the phone specifications below")
 st.markdown("<br><br>", unsafe_allow_html=True)
 
 
