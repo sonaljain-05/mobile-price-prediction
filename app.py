@@ -186,7 +186,8 @@ preview_df = pd.DataFrame([preview_dict])
 
 st.dataframe(preview_df, use_container_width=True)
 
-
+st.write("")
+st.write("")
 
 if st.button(" PREDICT MOBILE PRICE"):
     
