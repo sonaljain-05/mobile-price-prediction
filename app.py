@@ -165,6 +165,23 @@ st.write("### 📋 Input Preview Table  📋")
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
+preview_dict = {
+        "Sales (M)": sales,
+        "Weight (g)": weight,
+        "Screen (Inch)": resolution,
+        "PPI": ppi,
+        "CPU Cores": cpu_core,
+        "CPU GHz": cpu_freq,
+        "Internal Memory": internal_mem,
+        "RAM": ram,
+        "Rear Camera": rear_camera,
+        "Front Camera": front_camera,
+        "Battery": battery,
+        "Thickness": thickness
+    }
+
+
+
 
 
 if st.button(" PREDICT MOBILE PRICE"):
