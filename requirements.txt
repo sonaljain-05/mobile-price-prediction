@@ -1,9 +1,8 @@
 ipykernel
 pandas
-matplotlib
 scikit-learn
-warnings
-seaborn
 streamlit
 joblib
-image
+Pillow
+matplotlib
+seaborn
