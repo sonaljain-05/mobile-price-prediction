@@ -32,7 +32,7 @@ st.title("MOBILE PRICE PREDICTION APP")
 
 
 st.write("This app predicts mobile price based on specifications.")
-
+st.subheader("Please enter the phone specifications below")
 
 img = Image.open("mobile.png")
 img=img.resize((2000, 1000))
@@ -180,7 +180,10 @@ preview_dict = {
         "Thickness": thickness
     }
 
+preview_df = pd.DataFrame([preview_dict])
 
+
+st.dataframe(preview_df, use_container_width=True)
 
 
 
