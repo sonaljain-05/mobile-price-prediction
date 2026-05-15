@@ -1,0 +1,112 @@
+question 1	Explain the main assumptions of Linear Regression in detail.
+
+answer 1 : there are a few main assumptions we rely on so the model gives reliable results:
+
+First, we assume linearity — meaning the relationship between the independent variables and the dependent 
+variable is roughly a straight line, not curved or random.
+
+Second, independence of errors — the mistakes the model makes should not depend on each other. 
+One error shouldn’t affect another.
+
+Third, constant variance (homoscedasticity) — the spread of errors should be roughly the same across
+ all values of the input. If the spread keeps increasing or decreasing, results become less trustworthy.
+
+Fourth, normality of errors — the errors should be approximately normally distributed, especially 
+important for hypothesis testing and confidence intervals.
+
+Lastly, we assume no multicollinearity — the independent variables should not be too strongly related
+ to each other, otherwise it becomes hard to separate their individual effects.
+
+Overall, these assumptions help ensure the model is stable, accurate, and meaningful in interpretation.
+
+
+
+question 2.	What is the difference between R-squared and Adjusted R-squared?
+
+
+
+answer 2
+R-squared (R²) tells us how well the regression model explains the variation in the dependent variable. 
+It always increases (or stays the same) when we add more independent variables, even if those variables are not actually useful.
+
+Adjusted R-squared is a modified version of R² that adjusts for the number of predictors in the model. 
+It only increases if the new variable actually improves the model; otherwise, it can decrease.
+
+Main difference:
+R² can be overly optimistic because it never goes down, while Adjusted R² gives a more realistic measure of model
+ performance by penalizing unnecessary variables.
+
+
+
+
+question 3	What are the different types of Regularization techniques in Regression. Explain in detail with cost functions
+ of each technique.
+
+answer 3
+There are three main types of regularization techniques:
+
+1. L1 Regularization (Lasso Regression)
+In this method, the model is penalized based on the absolute values of the coefficients. This means it tries to reduce some coefficients completely to zero. Because of this, Lasso is useful when we want feature selection, as it can remove less important variables automatically.
+
+2. L2 Regularization (Ridge Regression)
+Here, the penalty is based on the square of the coefficients. Instead of making coefficients zero, it shrinks them closer to zero but keeps all features in the model. Ridge is useful when all features are important but we want to reduce their impact to avoid overfitting.
+
+3. Elastic Net Regularization
+This is a combination of both L1 and L2 regularization. It uses both absolute and squared penalties together. Elastic Net is helpful when there are many correlated features and we want a balance between feature selection and coefficient shrinkage.
+
+
+Lasso removes useless features
+Ridge reduces impact of all features
+Elastic Net does both in a balanced way
+
+question 4	How logistic regression works for multiclass classification. Explain in detail.
+
+answer 4:Logistic regression is basically designed for binary classification, 
+but for multiclass problems (more than 2 classes), it is extended using special approaches.
+
+The most common method is One-vs-Rest (OvR). In this, the model builds one classifier
+ per class. Each classifier learns to separate one class from all the others. For example,
+  if there are 3 classes (A, B, C), the model trains 3 separate binary models: A vs rest, 
+  B vs rest, and C vs rest. At prediction time, the class with the highest probability is 
+  selected.
+
+Another method is Softmax (Multinomial Logistic Regression). Here, instead of building
+ separate models, a single model is used that directly handles all classes together. 
+ 
+ It calculates probabilities for all classes at the same time and ensures they sum to 1.
+  The class with the highest probability becomes the final output.
+
+
+OvR = multiple binary models
+Softmax = one model handling all classes together
+
+
+question 5	Explain the performance metrics of logistic regression.
+
+answer 5 : Performance metrics for logistic regression are used to check how well the model is 
+classifying outcomes (like yes/no, 0/1).
+
+1. Accuracy
+It measures how many predictions the model got correct out of total predictions. 
+It works well when classes are balanced,
+ but can be misleading if data is imbalanced.
+
+2. Precision
+It tells us, out of all the positive predictions made by the model, how many were actually 
+correct. High precision means fewer false positives.
+
+3. Recall (Sensitivity)
+It measures how many actual positive cases the model was able to correctly identify. 
+High recall means fewer false negatives.
+
+4. F1 Score
+It is a balance between precision and recall. It is useful when we need a trade-off 
+between missing positive cases and avoiding wrong positive predictions.
+
+5. Confusion Matrix
+It is a table that shows true positives, true negatives, false positives, and false
+ negatives. It helps to understand where the model is making mistakes.
+
+6. ROC-AUC Curve
+It shows how well the model can distinguish between classes at different thresholds.
+ A higher AUC means better overall performance.
