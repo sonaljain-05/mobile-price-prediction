@@ -46,13 +46,16 @@ answer 3
 There are three main types of regularization techniques:
 
 1. L1 Regularization (Lasso Regression)
-In this method, the model is penalized based on the absolute values of the coefficients. This means it tries to reduce some coefficients completely to zero. Because of this, Lasso is useful when we want feature selection, as it can remove less important variables automatically.
+In this method, the model is penalized based on the absolute values of the coefficients. This means it tries to reduce some coefficients
+completely to zero. Because of this, Lasso is useful when we want feature selection, as it can remove less important variables automatically.
 
 2. L2 Regularization (Ridge Regression)
-Here, the penalty is based on the square of the coefficients. Instead of making coefficients zero, it shrinks them closer to zero but keeps all features in the model. Ridge is useful when all features are important but we want to reduce their impact to avoid overfitting.
+Here, the penalty is based on the square of the coefficients. Instead of making coefficients zero, it shrinks them closer to zero but keeps all 
+features in the model. Ridge is useful when all features are important but we want to reduce their impact to avoid overfitting.
 
 3. Elastic Net Regularization
-This is a combination of both L1 and L2 regularization. It uses both absolute and squared penalties together. Elastic Net is helpful when there are many correlated features and we want a balance between feature selection and coefficient shrinkage.
+This is a combination of both L1 and L2 regularization. It uses both absolute and squared penalties together. Elastic Net is
+helpful when there are many correlated features and we want a balance between feature selection and coefficient shrinkage.
 
 
 Lasso removes useless features
